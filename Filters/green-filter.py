@@ -22,11 +22,11 @@ while True:
 img=cv2.imread(file_name);
 height, width, depth = img.shape;
 cv2.imshow('Original Image',img);
-for x in xrange(0,height):
-	for y in xrange(0,width):
-		blue=img[x][y][0];
-		green=img[x][y][1];
-		red=img[x][y][2];
-		img[x][y]=[blue,255,red];
+for pixY in xrange(0,height):
+	for pixX in xrange(0,width):
+		blue=img[pixY][pixX][0];
+		green=img[pixY][pixX][1];
+		red=img[pixY][pixX][2];
+		img[pixY][pixX]=[blue,255,red];
 cv2.imshow('Image with green filter',img);
 cv2.waitKey();
